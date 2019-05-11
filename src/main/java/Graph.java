@@ -94,7 +94,7 @@ public class Graph {
 
             //Сравнение расстояний от начальной верщины с элементом sPath
             if (startToFringe < sPathDist) {
-                sPath[column].parentVert = currentToFringe; //to do currentVert
+                sPath[column].parentVert = currentVert;
                 sPath[column].distance = startToFringe;
             }
             column++;
@@ -107,11 +107,11 @@ public class Graph {
             if (sPath[j].distance == INFINITY) System.out.printf("inf");
             else System.out.print(sPath[j].distance);
             if (sPath[j].parentVert == INFINITY){
-                System.out.print("(inf.)");
+                System.out.println("(inf.)");
             }
             else
             {char parent = vertexList[sPath[j].parentVert].label;
-            System.out.print("(" + parent + ")");}
+            System.out.println("(" + parent + ")");}
         }
         System.out.println("");
     }

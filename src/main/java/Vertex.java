@@ -1,5 +1,4 @@
 public class Vertex {
-
     public char label;
     public boolean isInTree;
 
